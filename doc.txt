@@ -1,0 +1,19 @@
+kitapları kategorilere ayıracağız
+crud işlermeri.yani CREATE-READ-UBDATE-DELETE işlemlerini kitaplar ve kategorileriçin yapacağız 
+ 
+ .db json bizim veri tabanımız olarak çalışacak 
+ 
+ A.işlemlerin
+ 1.Dependencies 
+ -json-server
+ -Redux
+ -React-redux
+ -Axios
+ -React-router-dom KULLANILACAK
+ **** redux yapısı kurulacak 
+
+ !!!! store da hangi state ler tutulacak karar verilmeli
+ ** books ve category 
+ * router-dom yapısı oluşturulacak. page adlı dosya altında 
+ *bootstarp eklenecek 
+ *ilk acılış sayfasında redux işlemleri yapılır.burası App.js dir 

@@ -1,0 +1,25 @@
+{
+    "books":[
+        {
+            "id":"1",
+            "title":"İnce Memet",
+            "author":"Yaşar Kemal",
+            "ISBN":"1234567890987",
+            "publisher":"İletişim",
+            "price":"70",
+            "categoryId":"2"
+
+
+        }
+    ],
+    "categories":[
+        {
+            "id":"1",
+            "name":"roman"
+        },
+        {
+            "id":"2",
+            "name":"hikaye"
+        }
+    ]
+}
