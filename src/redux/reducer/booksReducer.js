@@ -2,7 +2,7 @@ import actionType from "../action/actionTypes";
 
 
 const initialState={
-    pending:false,
+    pending:true,
     success:false,
     books:[],
     error:false,
@@ -29,7 +29,7 @@ const booksReducer=(state=initialState,action)=> {
       case actionType.bookAction.GET_BOOKS_FAİL:
      return{
         ...state,
-        pending:true,
+        pending:false,
         success:false,
        error:true,
        errorMessage:action.payload

@@ -1,18 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../component/Header";
 import ListBooks from "../component/ListBooks";
-import { useSelector } from "react-redux";
+import Button from "../component/Button";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-
+  const navigate=useNavigate()
   return (
     <div>
       <Header />
-      <ListBooks/>
-      <h1>Anasayfa</h1>
+      <div className="container my-5">
+        <div className="d-flex justify-content-end">
+          <Button text="Kitap Ekle" onClick={()=>navigate("/add-book")}/>
+        </div>
 
-      
+        <ListBooks />
+      </div>
     </div>
   );
 };

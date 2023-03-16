@@ -8,6 +8,7 @@ import api from "./api/Api";
 import Url from "./api/Url";
 import actionType from "./redux/action/actionTypes";
 import Loading from "./component/Loading";
+import AddBook from "./page/AddBook";
 
 function App() {
   const dispatch = useDispatch();
@@ -15,13 +16,12 @@ function App() {
   useEffect(() => {
     //useEfect ile api ye istek atıyoruz.veri çağırıyoruz.bunuda axios la yapıyoruz
     dispatch({ type: actionType.bookAction.GET_BOOKS_START });
-    api
-      .get(Url.books)
+    api.get(Url.books)
       .then((res) => {
         setTimeout(() => {
           dispatch({
             type: actionType.bookAction.GET_BOOKS_SUCCESS,
-            payload: res.data,
+            payload: res.data
           });
         }, 1000);
       }) //eger başarılı olduysa start yani işlem başladıysa
@@ -35,12 +35,11 @@ function App() {
     // get category
 
     dispatch({ type: actionType.categoryAction.GET_CATEGORY_START });
-    api
-      .get(Url.categories)
+    api.get(Url.categories)
       .then((res) => {
         setTimeout(() => {
           dispatch({
-            type: actionType.categoryAction.GET_CATEGORY_SUCCES,
+            type: actionType.categoryAction.GET_CATEGORY_SUCCESS,
             payload: res.data,
           });
         }, 1000);
@@ -53,7 +52,7 @@ function App() {
         });
       });
   }, []);
-  const allState = useSelector((state) => state);
+
 
   if (booksState.pending === true || categoryState.pending === true)
     return <Loading />;
@@ -62,6 +61,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/add-book" element={<AddBook/>} />
+
       </Routes>
     </BrowserRouter>
   );

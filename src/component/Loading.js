@@ -14,7 +14,7 @@ const Loading = () => {
         alignItems:"center"
 
 }}>
-        <div class="spinner-border text-primary">
+        <div className="spinner-border text-primary">
  
 </div>
     </div>

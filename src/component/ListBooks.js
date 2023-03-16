@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { upperFirstLetter } from "../utils/Function";
+import Button from "./Button";
 
 const ListBooks = () => {
     
   const { booksState,categoryState } = useSelector((state) => state);
-  console.log(booksState);
+ 
 
   return (
     <div>
@@ -18,7 +20,7 @@ const ListBooks = () => {
 
       { booksState.books.length > 0 &&
        (
-        <div className="container my-5">
+        <div>
           <table className="table table-striped">
             <thead>
               <tr >
@@ -37,9 +39,15 @@ const ListBooks = () => {
                 <tr key={book.id}>
 
                 <th scope="row">{index+1} </th>
-                <td>{book.title}</td>
+                <td>{upperFirstLetter(book.title)}</td>
                 <td>{myCategory.name}</td>
-                <td>@mdo</td>
+                <td>
+                <div className="btn-group" role="group" >
+  <Button className="btn-sm" text="Detay" type="secondary"/>
+  <Button className="btn-sm" text="Sil"  type="danger"/>
+  <Button className="btn-sm" text="Güncelle" type="primary"/>
+</div>
+                </td>
               </tr>
             )
            })

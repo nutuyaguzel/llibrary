@@ -1,7 +1,7 @@
 import actionType from "../action/actionTypes";
 
 const initialState = {
-  pending: false, //bir işlem başladı
+  pending: true, //bir işlem başladı
   success: false, // işlem basarı bilgisi
   categories: [],
   error: false,

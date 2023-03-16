@@ -2,15 +2,27 @@
     "books":[
         {
             "id":"1",
-            "title":"İnce Memet",
+            "title":"ince memet",
             "author":"Yaşar Kemal",
             "ISBN":"1234567890987",
             "publisher":"İletişim",
             "price":"70",
-            "categoryId":"2"
+            "categoryId":"1"
+
+
+        },
+        {
+            "id":"2",
+            "title":"Hayvan çifliği",
+            "author":"George Orwell",
+            "ISBN":"1234567890985",
+            "publisher":"İletişim",
+            "price":"70",
+            "categoryId":"1"
 
 
         }
+
     ],
     "categories":[
         {
